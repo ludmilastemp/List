@@ -15,36 +15,36 @@
 int main ()
 {
 
-    Node node0 = { 10 };
-    node0.next = &node0;
-    node0.prev = &node0;
-
-    Node* node1 = ListStandardInsert (&node0, 15);
-    Node* node2 = ListStandardInsert (node1,  25);
-    Node* node3 = ListStandardInsert (&node0, 20);
-
-    node3 = ListStandardDelete (node3);
-    node1 = ListStandardDelete (node1);
-
-    printf ("node0\n");
-        printf ("\tdata = %d\n", node0.data);
-        printf ("\tptr  = %d\n", &node0);
-        printf ("\tnext = %d\n", node0.next);
-        printf ("\tprev = %d\n", node0.prev);
-
-    printf ("node1\n");
-        printf ("\tptr  = %d\n", node1);
-
-    printf ("node2\n");
-        printf ("\tdata = %d\n", node2->data);
-        printf ("\tptr  = %d\n", node2);
-        printf ("\tnext = %d\n", node2->next);
-        printf ("\tprev = %d\n", node2->prev);
-
-    printf ("node3\n");
-        printf ("\tptr  = %d\n", node3);
-
-    return 0;
+//    Node node0 = { 10 };
+//    node0.next = &node0;
+//    node0.prev = &node0;
+//
+//    Node* node1 = ListStandardInsert (&node0, 15);
+//    Node* node2 = ListStandardInsert (node1,  25);
+//    Node* node3 = ListStandardInsert (&node0, 20);
+//
+//    node3 = ListStandardDelete (node3);
+//    node1 = ListStandardDelete (node1);
+//
+//    printf ("node0\n");
+//        printf ("\tdata = %d\n", node0.data);
+//        printf ("\tptr  = %d\n", &node0);
+//        printf ("\tnext = %d\n", node0.next);
+//        printf ("\tprev = %d\n", node0.prev);
+//
+//    printf ("node1\n");
+//        printf ("\tptr  = %d\n", node1);
+//
+//    printf ("node2\n");
+//        printf ("\tdata = %d\n", node2->data);
+//        printf ("\tptr  = %d\n", node2);
+//        printf ("\tnext = %d\n", node2->next);
+//        printf ("\tprev = %d\n", node2->prev);
+//
+//    printf ("node3\n");
+//        printf ("\tptr  = %d\n", node3);
+//
+//    return 0;
 
     struct List list = { };
     ListStructCtor (&list);
