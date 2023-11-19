@@ -17,16 +17,16 @@ f0->f1->f2->f3->f4->f5->f6->f7 [ weight = 1000, color = "#FFFFFF" ]
 
 edge [ arrowhead = none, color = "#FFA0A0", style = bold ]
 f0:ne-> f1:nw
-f1:ne-> f3:nw
-f3:ne-> f0:nw
+f1:se-> f3:sw
+f3:se-> f0:sw
 
 edge [ arrowhead = none, color = "#A0FFA0", style = bold ]
 f0:se-> f2:sw
-f2:se-> f4:sw
-f4:se-> f5:sw
-f5:se-> f6:sw
-f6:se-> f7:sw
-f7:se-> f0:sw
+f2:ne-> f4:nw
+f4:ne-> f5:nw
+f5:ne-> f6:nw
+f6:ne-> f7:nw
+f7:ne-> f0:nw
 
 fh [ fillcolor = "#D0FFFF", color = "#FFA0A0", label = "head" ]
 fh:s -> f1:n[ weight = 300, color = "#D0FFFF", style = bold ]

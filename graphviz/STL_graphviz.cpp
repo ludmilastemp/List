@@ -2,13 +2,10 @@
 
 #include <assert.h>
 
-//#define pr(...) fprintf(fp, __VA_ARGS__)
-
-
 int  STL_Graphviz (const List* list)
 {
 #define pr(...) fprintf (fp, __VA_ARGS__)
-    FILE* fp = fopen ("STL_graphviz_png.dot", "w");
+    FILE* fp = fopen ("graphviz/STL_graphviz_png.dot", "w");
     assert (fp);
 
     pr ("digraph STL\n{\n");
@@ -39,9 +36,9 @@ int  STL_Graphviz (const List* list)
     pr ("f0:ne-> f%d:nw\n", i);
     while (i != 0)
     {
-        pr ("f%d:ne-> ", i);
+        pr ("f%d:se-> ", i);
         i = list->next[i];
-        pr ("f%d:nw\n", i);
+        pr ("f%d:sw\n", i);
     }
 
     pr ("\nedge [ arrowhead = none, color = \"#A0FFA0\", style = bold ]\n");
@@ -49,9 +46,9 @@ int  STL_Graphviz (const List* list)
     pr ("f0:se-> f%d:sw\n", i);
     while (i != 0)
     {
-        pr ("f%d:se-> ", i);
+        pr ("f%d:ne-> ", i);
         i = list->next[i];
-        pr ("f%d:sw\n", i);
+        pr ("f%d:nw\n", i);
     }
 
     pr ("\nfh [ fillcolor = \"#D0FFFF\", color = \"#FFA0A0\", label = \"head\" ]\n");

@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-#include "STL_list.h"
-#include "STL_list_struct.h"
+#include "list/STL_list.h"
+#include "list/STL_list_struct.h"
 
-#include "STL_list_standard.h"
-#include "STL_graphviz.h"
+#include "list_standard/STL_list_standard.h"
+#include "graphviz/STL_graphviz.h"
 
     //{}o,o{}
     //   |

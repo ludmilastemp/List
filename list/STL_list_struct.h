@@ -19,6 +19,7 @@ struct List
     int capacity;
     int size;
     int free;
+
     static const int DATA_POISON = 0;
     static const int PREV_POISON = -1;
 };

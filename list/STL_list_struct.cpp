@@ -2,7 +2,7 @@
 
 // objdump -t main.o   // для static const
 
-static const int LIST_INITIAL_CAPACITY  = 4;
+static const int LIST_INITIAL_CAPACITY  = 4;      // hdr
 static const int LIST_INITIAL_SIZE      = 0;
 static const int LIST_EXPAND_MULTIPLIER = 2;
 
@@ -204,7 +204,7 @@ int ListStructRealloc (List *list)
 
     list->data = (int*) realloc (list->data, list->capacity * sizeof (LIST_T));
     if (list->data == nullptr) ERROR (DATA_NULLPTR);
-    assert (list->data);
+    assert (list->data); // err
 
     list->next = (int*) realloc (list->next, list->capacity * sizeof (int));
     if (list->next == nullptr) ERROR (NEXT_NULLPTR);
